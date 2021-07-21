@@ -8,10 +8,10 @@ Title "Martlet IV Data Logger"
 Date "2020-02-23"
 Rev "2"
 Comp "Cambridge University Spaceflight"
-Comment1 ""
+Comment1 "Drawn by H. Franks and H. Free"
 Comment2 ""
-Comment3 "H. Franks, S. Prakeerth, A. Matthews, H. Free"
-Comment4 "Drawn By"
+Comment3 ""
+Comment4 ""
 $EndDescr
 Wire Notes Line
 	2950 7300 4300 7300
@@ -381,11 +381,11 @@ NoConn ~ 2750 1500
 Text Label 1650 4200 2    50   ~ 0
 FLASH_CS
 Text Label 1650 4100 2    50   ~ 0
-FLASH_MOSI
+MOSI
 Text Label 1650 4000 2    50   ~ 0
-FLASH_MISO
+MISO
 Text Label 1650 3900 2    50   ~ 0
-FLASH_SCK
+SCLK
 Text Label 1650 4900 2    50   ~ 0
 JTDI
 NoConn ~ 2750 1600
@@ -983,13 +983,13 @@ Wire Wire Line
 NoConn ~ 6500 3400
 NoConn ~ 6500 3300
 Text Label 5000 3200 2    50   ~ 0
-SPI2_CS
+FLASH_CS
 Text Label 5000 3300 2    50   ~ 0
-SPI2_MOSI
+MOSI
 Text Label 5000 3400 2    50   ~ 0
-SPI2_MISO
+MISO
 Text Label 5000 3100 2    50   ~ 0
-SPI2_SCK
+SCLK
 Wire Wire Line
 	5000 3100 5100 3100
 Wire Wire Line
