@@ -1,1342 +1,761 @@
 EESchema Schematic File Version 4
 EELAYER 30 0
 EELAYER END
-$Descr A3 16535 11693
+$Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Martlet IV Blackbox"
-Date "2020-02-23"
-Rev "2"
+Date "2021-08-08"
+Rev "3"
 Comp "Cambridge University Spaceflight"
-Comment1 "Drawn by H. Franks and H. Free"
+Comment1 "Drawn by H. Franks"
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
 Wire Notes Line
-	2950 7400 4350 7400
-Wire Notes Line
-	2950 6100 4350 6100
-Wire Notes Line
 	16050 19000 16050 18950
 Wire Notes Line
 	16050 15100 16050 15150
-Text Label 3450 1700 2    50   ~ 0
-JTDO
-NoConn ~ 2750 1800
-Text Notes 2850 1950 0    39   ~ 0
-PB4 is JTRST,\nDO NOT CONNECT\n(Errata 2.1.4)
-Wire Notes Line
-	550  6100 2850 6100
-Wire Notes Line
-	550  7300 2850 7300
-Wire Notes Line
-	550  6100 550  7300
-Wire Notes Line
-	2850 6100 2850 7300
 $Comp
-L cusf-kicad:LED D?
-U 1 1 60BFC600
-P 3900 6350
-F 0 "D?" H 3900 6300 50  0000 R CNN
-F 1 "RED" H 3900 6400 50  0000 R CNN
-F 2 "agg:0603-LED" H 3900 6350 50  0001 C CNN
-F 3 "" H 3900 6350 50  0001 C CNN
-F 4 "2314404" H 3900 6350 50  0001 C CNN "Farnell"
-	1    3900 6350
-	-1   0    0    1   
-$EndComp
-$Comp
-L cusf-kicad:R R?
-U 1 1 60BFC602
-P 3600 6350
-F 0 "R?" H 3650 6400 50  0000 C CNN
-F 1 "100" H 3650 6300 50  0000 C CNN
-F 2 "agg:0402" H 3600 6350 50  0001 C CNN
-F 3 "" H 3600 6350 50  0001 C CNN
-F 4 "9239111" H 3600 6350 50  0001 C CNN "Farnell"
-	1    3600 6350
+L cusf-kicad:SN65LVDT14 IC1
+U 1 1 6111C269
+P 5000 2700
+F 0 "IC1" H 4800 3500 50  0000 L CNN
+F 1 "SN65LVDT14" H 5000 1900 50  0000 C CNN
+F 2 "cusf:TSSOP-20" H 4800 1800 50  0001 L CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn65lvdt14.pdf" H 4800 1700 50  0001 L CNN
+F 4 "595-SN65LVDT14PW" H 4800 1600 50  0001 L CNN "Mouser"
+	1    5000 2700
 	1    0    0    -1  
 $EndComp
 $Comp
-L cusf-kicad:R R?
-U 1 1 5EA478E6
-P 3600 6650
-F 0 "R?" H 3650 6700 50  0000 C CNN
-F 1 "100" H 3650 6600 50  0000 C CNN
-F 2 "agg:0402" H 3600 6650 50  0001 C CNN
-F 3 "" H 3600 6650 50  0001 C CNN
-F 4 "9239111" H 3600 6650 50  0001 C CNN "Farnell"
-	1    3600 6650
-	1    0    0    -1  
-$EndComp
-$Comp
-L cusf-kicad:R R?
-U 1 1 5AA4FF41
-P 3600 6950
-F 0 "R?" H 3650 7000 50  0000 C CNN
-F 1 "100" H 3650 6900 50  0000 C CNN
-F 2 "agg:0402" H 3600 6950 50  0001 C CNN
-F 3 "" H 3600 6950 50  0001 C CNN
-F 4 "9239111" H 3600 6950 50  0001 C CNN "Farnell"
-	1    3600 6950
-	1    0    0    -1  
-$EndComp
-Text Label 3050 6950 0    50   ~ 0
-LED_GRN
-Text Label 3050 6350 0    50   ~ 0
-LED_RED
-Text Label 3050 6650 0    50   ~ 0
-LED_YLW
-Wire Wire Line
-	3800 6350 3700 6350
-Wire Wire Line
-	3700 6650 3800 6650
-Wire Wire Line
-	3800 6950 3700 6950
-Text Notes 4300 7350 2    50   ~ 0
-Status LEDs
-Wire Notes Line
-	4350 6100 4350 7400
-Wire Notes Line
-	2950 6100 2950 7400
-Wire Wire Line
-	1300 6750 1300 6800
-Wire Wire Line
-	1300 6650 1350 6650
-Wire Wire Line
-	1300 6650 1300 6750
-Text Notes 2800 7250 2    50   ~ 0
-CAN Transceiver
-$Comp
-L cusf-kicad:PWR #FLG?
-U 1 1 5EA478ED
-P 1100 6400
-F 0 "#FLG?" H 1100 6560 50  0001 C CNN
-F 1 "PWR" H 1100 6500 50  0000 C CNN
-F 2 "" H 1100 6400 50  0001 C CNN
-F 3 "" H 1100 6400 50  0001 C CNN
-	1    1100 6400
-	1    0    0    -1  
-$EndComp
-Connection ~ 1300 6750
-Wire Wire Line
-	1350 6750 1300 6750
-Wire Wire Line
-	1100 6400 1100 6450
-Wire Wire Line
-	2150 6650 2250 6650
-Wire Wire Line
-	2150 6550 2250 6550
-Wire Wire Line
-	2150 6450 2250 6450
-Wire Wire Line
-	2150 6350 2250 6350
-Wire Wire Line
-	1300 6350 1300 6300
-Wire Wire Line
-	1350 6350 1300 6350
-Connection ~ 1300 6650
-Wire Wire Line
-	1300 6550 1300 6650
-Wire Wire Line
-	1350 6550 1300 6550
-$Comp
-L cusf-kicad:C C?
-U 1 1 5EA478E3
-P 1300 6450
-F 0 "C?" V 1350 6400 50  0000 R CNN
-F 1 "100n" V 1450 6400 50  0000 R CNN
-F 2 "agg:0402" H 1300 6450 50  0001 C CNN
-F 3 "" H 1300 6450 50  0001 C CNN
-F 4 "2496771" H 1300 6450 50  0001 C CNN "Farnell"
-	1    1300 6450
-	0    1    1    0   
-$EndComp
-Text Label 2250 6650 0    50   ~ 0
-CAN_RXD
-Text Label 2250 6550 0    50   ~ 0
-CAN_TXD
-Text Label 2250 6450 0    50   ~ 0
-CAN-
-Text Label 2250 6350 0    50   ~ 0
-CAN+
-$Comp
-L cusf-kicad:GND #PWR?
-U 1 1 5AA4FF16
-P 1300 6800
-F 0 "#PWR?" H 1170 6840 50  0001 L CNN
-F 1 "GND" H 1300 6700 50  0000 C CNN
-F 2 "" H 1300 6800 50  0000 C CNN
-F 3 "" H 1300 6800 50  0000 C CNN
-	1    1300 6800
-	1    0    0    -1  
-$EndComp
-Text Label 650  6450 0    50   ~ 0
-5V_CAN
-$Comp
-L cusf-kicad:3v3 #PWR?
-U 1 1 60BFC5FB
-P 1300 6300
-F 0 "#PWR?" H 1300 6410 50  0001 L CNN
-F 1 "3v3" H 1300 6390 50  0000 C CNN
-F 2 "" H 1300 6300 50  0000 C CNN
-F 3 "" H 1300 6300 50  0000 C CNN
-	1    1300 6300
-	1    0    0    -1  
-$EndComp
-$Comp
-L cusf-kicad:MCP2562 IC?
-U 1 1 60BFC5F9
-P 1750 6550
-F 0 "IC?" H 1450 6850 50  0000 L CNN
-F 1 "MCP2562" H 1450 6250 50  0000 L CNN
-F 2 "agg:DFN-8-EP-MICROCHIP" H 1450 6150 50  0001 L CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20005167C.pdf" H 1450 6050 50  0001 L CNN
-F 4 "2448755" H 1450 5950 50  0001 L CNN "Farnell"
-	1    1750 6550
-	1    0    0    -1  
-$EndComp
-Text Label 3450 3400 2    50   ~ 0
-LED_GRN
-Text Label 3450 3300 2    50   ~ 0
-LED_YLW
-Text Label 3450 3200 2    50   ~ 0
-LED_RED
-$Comp
-L cusf-kicad:STM32F405RxTx IC?
-U 1 1 56B79D5C
-P 2250 3200
-F 0 "IC?" H 1850 5100 50  0000 L CNN
-F 1 "STM32F405RxTx" H 1850 1300 50  0000 L CNN
-F 2 "agg:LQFP-64" H 1850 1200 50  0001 L CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00037051.pdf" H 1850 1100 50  0001 L CNN
-F 4 "2064363" H 1850 1000 50  0001 L CNN "Farnell"
-	1    2250 3200
-	1    0    0    -1  
-$EndComp
-Text Label 2900 5500 2    50   ~ 0
-JTCK
-NoConn ~ 2750 2000
-NoConn ~ 2750 1900
-Wire Wire Line
-	1800 5600 1800 5650
-Wire Wire Line
-	1800 5600 1850 5600
-Wire Wire Line
-	1800 5400 1850 5400
-Wire Wire Line
-	1800 5350 1800 5400
-Wire Wire Line
-	6250 2000 6250 1300
-Wire Wire Line
-	6250 1300 6300 1300
-Wire Wire Line
-	7300 1200 7200 1200
-Wire Wire Line
-	6250 1200 6300 1200
-Wire Wire Line
-	6250 1050 6250 1200
-Wire Wire Line
-	6000 1050 6000 1150
-Wire Wire Line
-	5750 1050 5750 1150
-Wire Wire Line
-	5500 1050 5500 1150
-Wire Wire Line
-	5250 1050 5250 1150
-Wire Wire Line
-	5000 1050 5000 1150
-Wire Wire Line
-	5000 1250 5000 1400
-Wire Wire Line
-	5250 1250 5250 1500
-Wire Wire Line
-	5500 1250 5500 1600
-Wire Wire Line
-	5750 1250 5750 1700
-NoConn ~ 2750 1400
-NoConn ~ 2750 1500
-Text Label 1200 4900 0    50   ~ 0
-JTDI
-NoConn ~ 2750 1600
-NoConn ~ 2750 2400
-NoConn ~ 2750 2500
-NoConn ~ 2750 3700
-NoConn ~ 2750 4400
-NoConn ~ 2750 4500
-NoConn ~ 2750 4600
-Text Label 4550 1900 0    50   ~ 0
-SDIO_CLK
-Text Label 4550 1800 0    50   ~ 0
-SDIO_CMD
-Text Label 4550 1700 0    50   ~ 0
-SDIO_D3
-Text Label 4550 1600 0    50   ~ 0
-SDIO_D2
-Text Label 4550 1500 0    50   ~ 0
-SDIO_D1
-Text Label 4550 1400 0    50   ~ 0
-SDIO_D0
-$Comp
-L cusf-kicad:GND #PWR?
-U 1 1 56B79BAB
-P 6250 2000
-F 0 "#PWR?" H 6250 1750 50  0001 C CNN
-F 1 "GND" H 6250 1900 50  0000 C CNN
-F 2 "" H 6250 2000 50  0000 C CNN
-F 3 "" H 6250 2000 50  0000 C CNN
-	1    6250 2000
-	1    0    0    -1  
-$EndComp
-$Comp
-L cusf-kicad:GND #PWR?
-U 1 1 56B79BA5
-P 7300 2000
-F 0 "#PWR?" H 7300 1750 50  0001 C CNN
-F 1 "GND" H 7300 1900 50  0000 C CNN
-F 2 "" H 7300 2000 50  0000 C CNN
-F 3 "" H 7300 2000 50  0000 C CNN
-	1    7300 2000
-	1    0    0    -1  
-$EndComp
-$Comp
-L cusf-kicad:MICROSD U?
-U 1 1 56B79B96
-P 6700 1500
-F 0 "U?" H 6400 1900 50  0000 L CNN
-F 1 "MICROSD" H 6400 1000 50  0000 L CNN
-F 2 "agg:MICROSD_MOLEX_503398-1892" H 6400 900 50  0001 L CNN
-F 3 "" H 6300 1800 50  0001 C CNN
-F 4 "2358234" H 6400 800 50  0001 L CNN "Farnell"
-	1    6700 1500
-	1    0    0    -1  
-$EndComp
-Text Label 3450 2300 2    50   ~ 0
-CAN_TXD
-Text Label 3450 2200 2    50   ~ 0
-CAN_RXD
-Text Label 1200 4800 0    50   ~ 0
-JTCK
-Text Label 1200 4700 0    50   ~ 0
-JTMS
-Text Label 3450 2700 2    50   ~ 0
-OTG_HS_VBUS
-Text Label 3450 2900 2    50   ~ 0
-OTG_HS_D+
-Text Label 3450 2800 2    50   ~ 0
-OTG_HS_D-
-$Comp
-L cusf-kicad:GND #PWR?
-U 1 1 56B79A46
-P 1800 5650
-F 0 "#PWR?" H 1800 5400 50  0001 C CNN
-F 1 "GND" H 1800 5550 50  0000 C CNN
-F 2 "" H 1800 5650 50  0000 C CNN
-F 3 "" H 1800 5650 50  0000 C CNN
-	1    1800 5650
-	1    0    0    -1  
-$EndComp
-Text Label 2900 5400 2    50   ~ 0
-JTMS
-NoConn ~ 2650 5600
-Text Label 1650 5500 0    50   ~ 0
-~RST
-$Comp
-L cusf-kicad:3v3 #PWR?
-U 1 1 56B799C5
-P 1800 5350
-F 0 "#PWR?" H 1800 5460 50  0001 L CNN
-F 1 "3v3" H 1800 5440 50  0000 C CNN
-F 2 "" H 1800 5350 50  0000 C CNN
-F 3 "" H 1800 5350 50  0000 C CNN
-	1    1800 5350
-	1    0    0    -1  
-$EndComp
-$Comp
-L cusf-kicad:SWD_TC P?
-U 1 1 56B799BE
-P 2250 5500
-F 0 "P?" H 1950 5700 50  0000 L CNN
-F 1 "SWD_TC" H 1950 5300 50  0000 L CNN
-F 2 "agg:TC2030-NL" H 1950 5200 50  0001 L CNN
-F 3 "" H 1850 5600 50  0001 C CNN
-	1    2250 5500
-	1    0    0    -1  
-$EndComp
-$Comp
-L cusf-kicad:GND #PWR?
-U 1 1 5EF6CF76
-P 1350 5650
-F 0 "#PWR?" H 1220 5690 50  0001 L CNN
-F 1 "GND" H 1350 5550 50  0000 C CNN
-F 2 "" H 1350 5650 50  0001 C CNN
-F 3 "" H 1350 5650 50  0001 C CNN
-	1    1350 5650
+L cusf-kicad:RJHSE-538x J2
+U 1 1 6111D8DA
+P 3350 2700
+F 0 "J2" H 2950 3200 50  0000 L CNN
+F 1 "RJHSE-538x" H 2950 2200 50  0000 L CNN
+F 2 "cusf:RJHSE-538X" H 2950 2100 50  0001 L CNN
+F 3 "http://www.farnell.com/cad/2167247.pdf" H 2950 2000 50  0001 L CNN
+F 4 "1462758" H 2950 1900 50  0001 L CNN "Farnell"
+	1    3350 2700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1350 5550 1350 5650
+	2850 2300 2750 2300
+Wire Wire Line
+	2750 2300 2750 2400
+Wire Wire Line
+	2850 3000 2750 3000
+Connection ~ 2750 3000
+Wire Wire Line
+	2750 3000 2750 3200
+Wire Wire Line
+	2850 2900 2750 2900
+Connection ~ 2750 2900
+Wire Wire Line
+	2750 2900 2750 3000
+Wire Wire Line
+	2850 2700 2750 2700
+Connection ~ 2750 2700
+Wire Wire Line
+	2750 2700 2750 2900
+Wire Wire Line
+	2750 2600 2850 2600
+Connection ~ 2750 2600
+Wire Wire Line
+	2750 2600 2750 2700
+Wire Wire Line
+	2850 2400 2750 2400
+Connection ~ 2750 2400
+Wire Wire Line
+	2750 2400 2750 2600
 $Comp
-L cusf-kicad:3v3 #PWR?
-U 1 1 5EF6CF7D
-P 1350 5350
-F 0 "#PWR?" H 1350 5460 50  0001 L CNN
-F 1 "3v3" H 1350 5440 50  0000 C CNN
-F 2 "" H 1350 5350 50  0000 C CNN
-F 3 "" H 1350 5350 50  0000 C CNN
-	1    1350 5350
+L cusf-kicad:GND #PWR01
+U 1 1 61127BD4
+P 2750 3200
+F 0 "#PWR01" H 2620 3240 50  0001 L CNN
+F 1 "GND" H 2750 3100 50  0000 C CNN
+F 2 "" H 2750 3200 50  0001 C CNN
+F 3 "" H 2750 3200 50  0001 C CNN
+	1    2750 3200
 	1    0    0    -1  
 $EndComp
+Text Label 4200 2300 2    50   ~ 0
+SCLK+
+Text Label 4200 2400 2    50   ~ 0
+SCLK-
+Text Label 4200 2500 2    50   ~ 0
+MISO-
+Text Label 4200 2600 2    50   ~ 0
+~CS1
+Text Label 4200 2700 2    50   ~ 0
+~CS2
+Text Label 4200 2800 2    50   ~ 0
+MISO+
+Text Label 4200 2900 2    50   ~ 0
+MOSI-
+Text Label 4200 3000 2    50   ~ 0
+MOSI+
 Wire Wire Line
-	1350 5350 1350 5450
+	4200 2600 3850 2600
+Wire Wire Line
+	4200 2700 3850 2700
+Wire Wire Line
+	4700 2100 4600 2100
+Wire Wire Line
+	4600 2100 4600 2000
+Wire Wire Line
+	4600 2000 4700 2000
+Connection ~ 4600 2000
+Wire Wire Line
+	4600 2000 4600 1900
 $Comp
-L cusf-kicad:R R?
-U 1 1 5EE75B3D
-P 5000 1150
-F 0 "R?" V 5000 1200 50  0000 L CNN
-F 1 "47k" V 5100 1200 50  0000 L CNN
-F 2 "" H 5000 1150 50  0001 C CNN
-F 3 "" H 5000 1150 50  0001 C CNN
-	1    5000 1150
-	0    1    1    0   
+L cusf-kicad:3v3 #PWR06
+U 1 1 61140A3A
+P 4600 1900
+F 0 "#PWR06" H 4600 2010 50  0001 L CNN
+F 1 "3v3" H 4600 2023 50  0000 C CNN
+F 2 "" H 4600 1900 50  0001 C CNN
+F 3 "" H 4600 1900 50  0001 C CNN
+	1    4600 1900
+	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	7300 1200 7300 2000
-NoConn ~ 7200 1800
-NoConn ~ 7200 1900
+	5300 2700 5400 2700
+Wire Wire Line
+	5400 2700 5400 2800
+Wire Wire Line
+	5400 2900 5300 2900
+Connection ~ 5400 2900
+Wire Wire Line
+	5300 2800 5400 2800
+Connection ~ 5400 2800
+Wire Wire Line
+	5400 2800 5400 2900
+Wire Wire Line
+	5400 2900 5400 3000
 $Comp
-L cusf-kicad:3v3 #PWR?
-U 1 1 5F505FB9
-P 7550 1500
-F 0 "#PWR?" H 7550 1610 50  0001 L CNN
-F 1 "3v3" H 7550 1623 50  0000 C CNN
-F 2 "" H 7550 1500 50  0001 C CNN
-F 3 "" H 7550 1500 50  0001 C CNN
-	1    7550 1500
-	1    0    0    -1  
+L cusf-kicad:GND #PWR07
+U 1 1 6114DA2F
+P 5400 3000
+F 0 "#PWR07" H 5400 2750 50  0001 C CNN
+F 1 "GND" H 5400 2900 50  0000 C CNN
+F 2 "" H 5400 3000 50  0000 C CNN
+F 3 "" H 5400 3000 50  0000 C CNN
+	1    5400 3000
+	-1   0    0    -1  
 $EndComp
+Wire Wire Line
+	4200 2400 3850 2400
+Wire Wire Line
+	4200 2300 3850 2300
+Wire Wire Line
+	4200 2900 3850 2900
+Wire Wire Line
+	4200 3000 3850 3000
+Wire Wire Line
+	4200 2500 3850 2500
+Wire Wire Line
+	4200 2800 3850 2800
+Text Label 4350 2300 0    50   ~ 0
+SCLK+
+Text Label 4350 2400 0    50   ~ 0
+SCLK-
+Wire Wire Line
+	4350 2400 4700 2400
+Wire Wire Line
+	4350 2300 4700 2300
+Text Label 4350 3200 0    50   ~ 0
+MISO+
+Wire Wire Line
+	4350 3200 4700 3200
+Text Label 4350 3300 0    50   ~ 0
+MISO-
+Wire Wire Line
+	4350 3300 4700 3300
+Text Label 4350 2600 0    50   ~ 0
+MOSI-
+Text Label 4350 2500 0    50   ~ 0
+MOSI+
+Wire Wire Line
+	4350 2600 4700 2600
+Wire Wire Line
+	4350 2500 4700 2500
+NoConn ~ 4700 2700
+NoConn ~ 4700 2800
+NoConn ~ 4700 2900
+NoConn ~ 4700 3000
+Text Label 5650 2500 2    50   ~ 0
+MISO
+Text Label 5650 2000 2    50   ~ 0
+SCLK
+Text Label 5650 2100 2    50   ~ 0
+MOSI
+NoConn ~ 5300 2200
+NoConn ~ 5300 2300
+Wire Wire Line
+	5300 2000 5850 2000
+Wire Wire Line
+	5300 2100 5850 2100
+Wire Wire Line
+	5300 2500 5850 2500
+Text Label 5450 2250 0    50   ~ 0
+~CS1
+Text Label 5450 2350 0    50   ~ 0
+~CS2
+Wire Wire Line
+	5450 2250 5850 2250
+Wire Wire Line
+	5450 2350 5850 2350
+Entry Wire Line
+	5850 2100 5950 2200
+Entry Wire Line
+	5850 2250 5950 2350
+Entry Wire Line
+	5850 2350 5950 2450
+Entry Wire Line
+	5850 2500 5950 2600
 $Comp
-L cusf-kicad:C C?
-U 1 1 5F506320
-P 7550 1550
-F 0 "C?" V 7550 1600 50  0000 L CNN
-F 1 "100n" V 7650 1600 50  0000 L CNN
-F 2 "" H 7550 1550 50  0001 C CNN
-F 3 "" H 7550 1550 50  0001 C CNN
-	1    7550 1550
+L cusf-kicad:CONN_01x03 J1
+U 1 1 611280AE
+P 2850 4300
+F 0 "J1" H 2750 4150 50  0000 R CNN
+F 1 "PWR" H 2750 4250 50  0000 R CNN
+F 2 "cusf:MOLEX-KK-254P-03" H 2850 4300 50  0001 C CNN
+F 3 "" H 2850 4300 50  0001 C CNN
+	1    2850 4300
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	2950 4100 3150 4100
+Wire Wire Line
+	2950 4300 3150 4300
+$Comp
+L cusf-kicad:3v3 #PWR04
+U 1 1 61130EE1
+P 3150 4100
+F 0 "#PWR04" H 3150 4210 50  0001 L CNN
+F 1 "3v3" V 3150 4200 50  0000 L CNN
+F 2 "" H 3150 4100 50  0001 C CNN
+F 3 "" H 3150 4100 50  0001 C CNN
+	1    3150 4100
 	0    1    1    0   
 $EndComp
 $Comp
-L cusf-kicad:GND #PWR?
-U 1 1 5F50768E
-P 7550 1700
-F 0 "#PWR?" H 7420 1740 50  0001 L CNN
-F 1 "GND" H 7550 1600 50  0000 C CNN
-F 2 "" H 7550 1700 50  0001 C CNN
-F 3 "" H 7550 1700 50  0001 C CNN
-	1    7550 1700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7550 1500 7550 1550
-Wire Wire Line
-	7550 1650 7550 1700
-NoConn ~ 2750 3800
-NoConn ~ 2750 3600
-NoConn ~ 2750 3500
-NoConn ~ 2750 3100
-NoConn ~ 2750 2600
-NoConn ~ 1750 3400
-NoConn ~ 1750 3500
-Wire Notes Line
-	7850 2350 4450 2350
-Wire Notes Line
-	4450 2350 4450 750 
-Wire Notes Line
-	4450 750  7850 750 
-Wire Notes Line
-	7850 750  7850 2350
-$Comp
-L cusf-kicad:C C?
-U 1 1 5EF6CF70
-P 1350 5550
-F 0 "C?" V 1450 5600 59  0000 L CNN
-F 1 "100n" V 1350 5600 59  0000 L CNN
-F 2 "agg:0402" H 1350 5550 59  0001 C CNN
-F 3 "" H 1350 5550 50  0001 C CNN
-F 4 "2496771" H 1350 5550 50  0001 C CNN "Farnell"
-	1    1350 5550
+L cusf-kicad:GND #PWR05
+U 1 1 611321E7
+P 3150 4300
+F 0 "#PWR05" H 3020 4340 50  0001 L CNN
+F 1 "GND" V 3150 4200 50  0000 R CNN
+F 2 "" H 3150 4300 50  0001 C CNN
+F 3 "" H 3150 4300 50  0001 C CNN
+	1    3150 4300
 	0    -1   -1   0   
 $EndComp
 Wire Notes Line
-	550  5950 550  750 
+	2550 4550 3450 4550
 Wire Notes Line
-	550  750  4300 750 
+	3450 4550 3450 4000
 Wire Notes Line
-	4300 750  4300 5950
+	3450 4000 2550 4000
 Wire Notes Line
-	550  5950 4300 5950
-Text Notes 550  700  0    98   ~ 20
-MICROCONTROLLER
-Text Label 1250 2800 0    50   ~ 0
-~RST
-Connection ~ 1650 1300
-Wire Wire Line
-	1650 1250 1650 1300
-Wire Wire Line
-	1650 1300 1650 1400
+	2550 4000 2550 4550
+Text Notes 3400 4500 2    50   ~ 0
+Power In (Molex)
 $Comp
-L cusf-kicad:3v3 #PWR?
-U 1 1 60B5FA00
-P 1650 1250
-AR Path="/6013AE2F/60B5FA00" Ref="#PWR?"  Part="1" 
-AR Path="/60B5FA00" Ref="#PWR?"  Part="1" 
-AR Path="/605DF50F/60B5FA00" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 1650 1360 50  0001 L CNN
-F 1 "3v3" H 1650 1350 50  0000 C CNN
-F 2 "" H 1650 1250 50  0001 C CNN
-F 3 "" H 1650 1250 50  0001 C CNN
-	1    1650 1250
-	1    0    0    -1  
-$EndComp
-Connection ~ 1650 1900
-Wire Wire Line
-	1450 3000 1650 3000
-Wire Wire Line
-	1650 3100 1750 3100
-Wire Wire Line
-	1650 3000 1650 3100
-Wire Wire Line
-	1450 3200 1450 3300
-Connection ~ 1450 3000
-Wire Wire Line
-	1450 3100 1450 3000
-$Comp
-L cusf-kicad:SMD_XTAL Y?
-U 1 1 60B5FA14
-P 1450 3100
-AR Path="/6013AE2F/60B5FA14" Ref="Y?"  Part="1" 
-AR Path="/60B5FA14" Ref="Y?"  Part="1" 
-AR Path="/605DF50F/60B5FA14" Ref="Y?"  Part="1" 
-F 0 "Y?" V 1500 3150 50  0000 L CNN
-F 1 "26M" V 1500 2900 50  0000 C CNN
-F 2 "agg:XTAL-20x16" H 1500 2880 50  0001 C CNN
-F 3 "" H 1450 3100 50  0001 C CNN
-F 4 "2506952" H 1450 3100 50  0001 C CNN "Farnell"
-	1    1450 3100
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	1650 1900 1750 1900
-Wire Wire Line
-	1650 1800 1650 1900
-Wire Wire Line
-	1650 1800 1750 1800
-Wire Wire Line
-	1650 1700 1650 1800
-Wire Wire Line
-	1650 1700 1750 1700
-Wire Wire Line
-	1650 1600 1650 1700
-Wire Wire Line
-	1650 1600 1750 1600
-Wire Wire Line
-	1650 1400 1650 1500
-Wire Wire Line
-	1650 1500 1750 1500
-Wire Wire Line
-	1650 1500 1650 1600
-Connection ~ 1650 1800
-Connection ~ 1650 1700
-Connection ~ 1650 1600
-Connection ~ 1650 1400
-Connection ~ 1650 1500
-Wire Wire Line
-	1650 1400 1750 1400
-Wire Wire Line
-	1500 2500 1750 2500
-Wire Wire Line
-	1500 2600 1750 2600
-Wire Wire Line
-	1450 1800 1650 1800
-Wire Wire Line
-	1450 1900 1650 1900
-Wire Wire Line
-	1450 1300 1650 1300
-$Comp
-L cusf-kicad:C C?
-U 1 1 60B5FA34
-P 1400 2500
-AR Path="/6013AE2F/60B5FA34" Ref="C?"  Part="1" 
-AR Path="/60B5FA34" Ref="C?"  Part="1" 
-AR Path="/605DF50F/60B5FA34" Ref="C?"  Part="1" 
-F 0 "C?" H 1100 2500 50  0000 R CNN
-F 1 "2µ2" H 950 2500 50  0000 R CNN
-F 2 "agg:0402" H 1400 2500 50  0001 C CNN
-F 3 "" H 1400 2500 50  0001 C CNN
-F 4 "2362088" H 1400 2500 50  0001 C CNN "Farnell"
-	1    1400 2500
-	1    0    0    1   
-$EndComp
-$Comp
-L cusf-kicad:C C?
-U 1 1 60B5FA3B
-P 1400 2600
-AR Path="/6013AE2F/60B5FA3B" Ref="C?"  Part="1" 
-AR Path="/60B5FA3B" Ref="C?"  Part="1" 
-AR Path="/605DF50F/60B5FA3B" Ref="C?"  Part="1" 
-F 0 "C?" H 1100 2600 50  0000 R CNN
-F 1 "2µ2" H 950 2600 50  0000 R CNN
-F 2 "agg:0402" H 1400 2600 50  0001 C CNN
-F 3 "" H 1400 2600 50  0001 C CNN
-F 4 "2362088" H 1400 2600 50  0001 C CNN "Farnell"
-	1    1400 2600
-	1    0    0    1   
-$EndComp
-Wire Wire Line
-	1150 2500 1400 2500
-Wire Wire Line
-	1400 2600 1150 2600
-Connection ~ 1150 2300
-Connection ~ 1150 2500
-Wire Wire Line
-	1150 2500 1150 2300
-Wire Wire Line
-	1150 2200 1150 2300
-Connection ~ 1150 2200
-Wire Wire Line
-	1150 2100 1150 2200
-Connection ~ 1150 2100
-Wire Wire Line
-	1150 1900 1150 2100
-Wire Wire Line
-	1750 2100 1150 2100
-Wire Wire Line
-	1750 2300 1150 2300
-Wire Wire Line
-	1750 2200 1150 2200
-Wire Wire Line
-	1150 2600 1150 2500
-$Comp
-L cusf-kicad:C C?
-U 1 1 60B5FA57
-P 1350 1800
-AR Path="/6013AE2F/60B5FA57" Ref="C?"  Part="1" 
-AR Path="/60B5FA57" Ref="C?"  Part="1" 
-AR Path="/605DF50F/60B5FA57" Ref="C?"  Part="1" 
-F 0 "C?" H 1100 1800 50  0000 R CNN
-F 1 "100n" H 950 1800 50  0000 R CNN
-F 2 "agg:0402" H 1350 1800 50  0001 C CNN
-F 3 "" H 1350 1800 50  0001 C CNN
-F 4 "2496771" H 1350 1800 50  0001 C CNN "Farnell"
-	1    1350 1800
-	1    0    0    -1  
-$EndComp
-$Comp
-L cusf-kicad:C C?
-U 1 1 60B5FA73
-P 1350 1900
-AR Path="/6013AE2F/60B5FA73" Ref="C?"  Part="1" 
-AR Path="/60B5FA73" Ref="C?"  Part="1" 
-AR Path="/605DF50F/60B5FA73" Ref="C?"  Part="1" 
-F 0 "C?" H 1100 1900 50  0000 R CNN
-F 1 "1µ" H 950 1900 50  0000 R CNN
-F 2 "agg:0402" H 1350 1900 50  0001 C CNN
-F 3 "" H 1350 1900 50  0001 C CNN
-F 4 "2496814" H 1350 1900 50  0001 C CNN "Farnell"
-	1    1350 1900
-	1    0    0    -1  
-$EndComp
-$Comp
-L cusf-kicad:C C?
-U 1 1 60B5FA7A
-P 1350 1300
-AR Path="/6013AE2F/60B5FA7A" Ref="C?"  Part="1" 
-AR Path="/60B5FA7A" Ref="C?"  Part="1" 
-AR Path="/605DF50F/60B5FA7A" Ref="C?"  Part="1" 
-F 0 "C?" H 1100 1300 50  0000 R CNN
-F 1 "4µ7" H 950 1300 50  0000 R CNN
-F 2 "agg:0402" H 1350 1300 50  0001 C CNN
-F 3 "" H 1350 1300 50  0001 C CNN
-F 4 "2426952" H 1350 1300 50  0001 C CNN "Farnell"
-	1    1350 1300
+L cusf-kicad:MountingHole_Pad H1
+U 1 1 611286A8
+P 3650 4200
+F 0 "H1" H 3750 4250 50  0000 L CNN
+F 1 "MountingHole_Pad" H 3750 4158 50  0001 L CNN
+F 2 "cusf:M3_MOUNT" H 3650 4200 50  0001 C CNN
+F 3 "" H 3650 4200 50  0001 C CNN
+	1    3650 4200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1350 1300 1150 1300
-Wire Wire Line
-	1150 1300 1150 1400
-Connection ~ 1150 1600
-Connection ~ 1150 1500
-Connection ~ 1150 1400
-Wire Wire Line
-	1150 1600 1150 1700
-Wire Wire Line
-	1150 1500 1150 1600
-Wire Wire Line
-	1150 1400 1150 1500
-Wire Wire Line
-	1150 1700 1150 1800
-Wire Wire Line
-	1150 1900 1350 1900
-Connection ~ 1150 1700
-Wire Wire Line
-	1350 1800 1150 1800
-Connection ~ 1150 1800
-Wire Wire Line
-	1150 1800 1150 1900
-Connection ~ 1150 1900
-Connection ~ 1150 2600
+	3650 4300 3650 4400
 $Comp
-L cusf-kicad:C C?
-U 1 1 60B5FAA1
-P 1200 3000
-AR Path="/6013AE2F/60B5FAA1" Ref="C?"  Part="1" 
-AR Path="/60B5FAA1" Ref="C?"  Part="1" 
-AR Path="/605DF50F/60B5FAA1" Ref="C?"  Part="1" 
-F 0 "C?" H 1100 3000 50  0000 R CNN
-F 1 "10p" H 950 3000 50  0000 R CNN
-F 2 "agg:0402" H 1200 3000 50  0001 C CNN
-F 3 "" H 1200 3000 50  0001 C CNN
-F 4 "2496771" H 1200 3000 50  0001 C CNN "Farnell"
-	1    1200 3000
+L cusf-kicad:GND #PWR02
+U 1 1 6112B98C
+P 3650 4500
+F 0 "#PWR02" H 3520 4540 50  0001 L CNN
+F 1 "GND" H 3650 4400 50  0000 C CNN
+F 2 "" H 3650 4500 50  0001 C CNN
+F 3 "" H 3650 4500 50  0001 C CNN
+	1    3650 4500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1450 3000 1300 3000
+	3650 4400 4000 4400
 Wire Wire Line
-	1200 3000 1150 3000
-Connection ~ 1150 3000
+	4000 4400 4000 4300
+Connection ~ 3650 4400
+Wire Wire Line
+	3650 4400 3650 4500
+Wire Wire Line
+	4000 4400 4350 4400
+Wire Wire Line
+	4350 4400 4350 4300
+Connection ~ 4000 4400
+Wire Wire Line
+	4350 4400 4700 4400
+Wire Wire Line
+	4700 4400 4700 4300
+Connection ~ 4350 4400
+Wire Notes Line
+	3500 4700 3500 4000
+Wire Notes Line
+	3500 4000 4950 4000
+Wire Notes Line
+	4950 4000 4950 4700
+Wire Notes Line
+	3500 4700 4950 4700
+Text Notes 4900 4650 2    50   ~ 0
+Mounting Holes
 $Comp
-L cusf-kicad:C C?
-U 1 1 60B5FAAB
-P 1200 3300
-AR Path="/6013AE2F/60B5FAAB" Ref="C?"  Part="1" 
-AR Path="/60B5FAAB" Ref="C?"  Part="1" 
-AR Path="/605DF50F/60B5FAAB" Ref="C?"  Part="1" 
-F 0 "C?" H 1100 3300 50  0000 R CNN
-F 1 "10p" H 950 3300 50  0000 R CNN
-F 2 "agg:0402" H 1200 3300 50  0001 C CNN
-F 3 "" H 1200 3300 50  0001 C CNN
-F 4 "2496771" H 1200 3300 50  0001 C CNN "Farnell"
-	1    1200 3300
+L cusf-kicad:MountingHole_Pad H2
+U 1 1 61147A00
+P 4000 4200
+F 0 "H2" H 4100 4250 50  0000 L CNN
+F 1 "MountingHole_Pad" H 4100 4158 50  0001 L CNN
+F 2 "cusf:M3_MOUNT" H 4000 4200 50  0001 C CNN
+F 3 "" H 4000 4200 50  0001 C CNN
+	1    4000 4200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1200 3300 1150 3300
-Connection ~ 1150 3300
-Wire Wire Line
-	1150 3250 1150 3300
-Connection ~ 1150 3250
-Wire Wire Line
-	1350 3250 1150 3250
-Wire Wire Line
-	1350 3200 1350 3250
-Wire Wire Line
-	1350 3100 1350 3050
-Wire Wire Line
-	1150 3000 1150 3050
-Wire Wire Line
-	1150 3050 1150 3250
-Connection ~ 1150 3050
-Wire Wire Line
-	1350 3050 1150 3050
-Wire Wire Line
-	1500 3300 1450 3300
-Connection ~ 1450 3300
-Wire Wire Line
-	1750 3200 1650 3200
-Wire Wire Line
-	1450 3300 1300 3300
 $Comp
-L cusf-kicad:R R?
-U 1 1 60B5FAC2
-P 1500 3300
-AR Path="/6013AE2F/60B5FAC2" Ref="R?"  Part="1" 
-AR Path="/60B5FAC2" Ref="R?"  Part="1" 
-AR Path="/605DF50F/60B5FAC2" Ref="R?"  Part="1" 
-F 0 "R?" H 1650 3250 50  0000 R TNN
-F 1 "100" H 1650 3150 50  0000 R CNN
-F 2 "agg:0402" H 1500 3300 50  0001 C CNN
-F 3 "" H 1500 3300 50  0001 C CNN
-F 4 "9239111" H 1500 3300 50  0001 C CNN "Farnell"
-	1    1500 3300
+L cusf-kicad:MountingHole_Pad H3
+U 1 1 6114843E
+P 4350 4200
+F 0 "H3" H 4450 4250 50  0000 L CNN
+F 1 "MountingHole_Pad" H 4450 4158 50  0001 L CNN
+F 2 "cusf:M3_MOUNT" H 4350 4200 50  0001 C CNN
+F 3 "" H 4350 4200 50  0001 C CNN
+	1    4350 4200
 	1    0    0    -1  
 $EndComp
+$Comp
+L cusf-kicad:MountingHole_Pad H4
+U 1 1 61148444
+P 4700 4200
+F 0 "H4" H 4800 4250 50  0000 L CNN
+F 1 "MountingHole_Pad" H 4800 4158 50  0001 L CNN
+F 2 "cusf:M3_MOUNT" H 4700 4200 50  0001 C CNN
+F 3 "" H 4700 4200 50  0001 C CNN
+	1    4700 4200
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	2600 3750 4250 3750
+Wire Notes Line
+	4250 3750 4250 1700
+Wire Notes Line
+	4250 1700 2600 1700
+Wire Notes Line
+	2600 1700 2600 3750
+Text Notes 4200 3700 2    50   ~ 0
+RJ45 Connector
+Wire Notes Line
+	4300 3750 5700 3750
+Wire Notes Line
+	5700 3750 5700 1700
+Wire Notes Line
+	5700 1700 4300 1700
+Wire Notes Line
+	4300 1700 4300 3750
+Text Notes 5650 3700 2    50   ~ 0
+LVDS Transceiver
 Wire Wire Line
-	1750 2900 1150 2900
-Connection ~ 1150 2900
-Wire Wire Line
-	1150 2900 1150 3000
-Wire Wire Line
-	1650 3200 1650 3300
-Wire Wire Line
-	1650 3300 1600 3300
+	2950 4200 3150 4200
 $Comp
 L cusf-kicad:GND #PWR?
-U 1 1 60B5FA0D
-P 1150 3350
-AR Path="/6013AE2F/60B5FA0D" Ref="#PWR?"  Part="1" 
-AR Path="/60B5FA0D" Ref="#PWR?"  Part="1" 
-AR Path="/605DF50F/60B5FA0D" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 1020 3390 50  0001 L CNN
-F 1 "GND" H 1150 3250 50  0000 C CNN
-F 2 "" H 1150 3350 50  0000 C CNN
-F 3 "" H 1150 3350 50  0000 C CNN
-	1    1150 3350
-	1    0    0    -1  
+U 1 1 6125B19C
+P 3150 4200
+F 0 "#PWR?" H 3020 4240 50  0001 L CNN
+F 1 "GND" V 3150 4100 50  0000 R CNN
+F 2 "" H 3150 4200 50  0001 C CNN
+F 3 "" H 3150 4200 50  0001 C CNN
+	1    3150 4200
+	0    -1   -1   0   
 $EndComp
+Text Label 6300 2900 0    50   ~ 0
+~CS1
 Wire Wire Line
-	1150 3300 1150 3350
+	7250 2800 8050 2800
 Wire Wire Line
-	1150 2600 1150 2900
+	8050 2700 7000 2700
+Wire Wire Line
+	7000 2450 7000 2700
+Wire Wire Line
+	7250 2450 7250 2800
+Wire Wire Line
+	7250 2250 7250 2350
+Connection ~ 7250 2250
+Wire Wire Line
+	7250 2250 7000 2250
+Wire Wire Line
+	7500 2250 7250 2250
+Wire Wire Line
+	7000 2250 7000 2350
+Connection ~ 7000 2250
+Wire Wire Line
+	7000 2250 6750 2250
 $Comp
-L cusf-kicad:W25Q80 IC?
-U 1 1 605DD8AE
-P 5800 3300
-F 0 "IC?" H 6400 3600 50  0000 R CNN
-F 1 "W25Q80" H 6400 3000 50  0000 R CNN
-F 2 "cusf:UFDFN-8" H 5200 2900 50  0001 L CNN
-F 3 "http://www.winbond.com/resource-files/w25q80dv%20dl_revh_10022015.pdf" H 5200 2800 50  0001 L CNN
-F 4 "W25Q80DVUXIECT-ND" H 5200 2700 50  0001 L CNN "DigiKey"
-	1    5800 3300
-	-1   0    0    -1  
-$EndComp
-Wire Notes Line
-	4450 4050 4450 2550
-$Comp
-L cusf-kicad:GND #PWR?
-U 1 1 6065FA51
-P 6650 3700
-F 0 "#PWR?" H 6650 3450 50  0001 C CNN
-F 1 "GND" H 6650 3600 50  0000 C CNN
-F 2 "" H 6650 3700 50  0000 C CNN
-F 3 "" H 6650 3700 50  0000 C CNN
-	1    6650 3700
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	6650 3700 6650 3200
-Wire Wire Line
-	6650 3200 6500 3200
-$Comp
-L cusf-kicad:3v3 #PWR?
-U 1 1 6068ACD4
-P 6650 2800
-F 0 "#PWR?" H 6650 2910 50  0001 L CNN
-F 1 "3v3" H 6650 2923 50  0000 C CNN
-F 2 "" H 6650 2800 50  0001 C CNN
-F 3 "" H 6650 2800 50  0001 C CNN
-	1    6650 2800
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	6650 3100 6650 2800
-Wire Wire Line
-	6650 3100 6500 3100
-NoConn ~ 6500 3400
-NoConn ~ 6500 3300
-Text Label 4550 3200 0    50   ~ 0
-FLASH_CS
-Text Label 4550 3300 0    50   ~ 0
-FLASH_MOSI
-Text Label 4550 3400 0    50   ~ 0
-FLASH_MISO
-Text Label 4550 3100 0    50   ~ 0
-FLASH_SCLK
-Wire Notes Line
-	7000 2550 7000 4050
-Wire Notes Line
-	4450 2550 7000 2550
-Wire Notes Line
-	4450 4050 7000 4050
-Text Notes 4500 2650 0    50   ~ 0
-Placeholder for a larger chip (512 Mbit)
-Wire Wire Line
-	6000 1250 6000 1800
-$Comp
-L cusf-kicad:R R?
-U 1 1 60D2A9E0
-P 6000 1150
-F 0 "R?" V 6000 1200 50  0000 L CNN
-F 1 "47k" V 6100 1200 50  0000 L CNN
-F 2 "" H 6000 1150 50  0001 C CNN
-F 3 "" H 6000 1150 50  0001 C CNN
-	1    6000 1150
-	0    1    1    0   
-$EndComp
-$Comp
-L cusf-kicad:R R?
-U 1 1 60D2AC4C
-P 5750 1150
-F 0 "R?" V 5750 1200 50  0000 L CNN
-F 1 "47k" V 5850 1200 50  0000 L CNN
-F 2 "" H 5750 1150 50  0001 C CNN
-F 3 "" H 5750 1150 50  0001 C CNN
-	1    5750 1150
-	0    1    1    0   
-$EndComp
-$Comp
-L cusf-kicad:R R?
+L cusf-kicad:R R3
 U 1 1 60D65E93
-P 5500 1150
-F 0 "R?" V 5500 1200 50  0000 L CNN
-F 1 "47k" V 5600 1200 50  0000 L CNN
-F 2 "" H 5500 1150 50  0001 C CNN
-F 3 "" H 5500 1150 50  0001 C CNN
-	1    5500 1150
+P 7250 2350
+F 0 "R3" V 7250 2400 50  0000 L CNN
+F 1 "47k" V 7350 2400 50  0000 L CNN
+F 2 "cusf:0402" H 7250 2350 50  0001 C CNN
+F 3 "" H 7250 2350 50  0001 C CNN
+	1    7250 2350
 	0    1    1    0   
 $EndComp
-Connection ~ 6000 1800
-Wire Wire Line
-	6000 1800 6300 1800
-Connection ~ 5750 1700
-Wire Wire Line
-	5750 1700 6300 1700
-Connection ~ 5500 1600
-Wire Wire Line
-	5500 1600 6300 1600
-Connection ~ 5250 1500
-Wire Wire Line
-	5250 1500 6300 1500
-Connection ~ 5000 1400
-Wire Wire Line
-	5000 1400 6300 1400
 $Comp
-L cusf-kicad:R R?
+L cusf-kicad:R R2
 U 1 1 60DDAA61
-P 5250 1150
-F 0 "R?" V 5250 1200 50  0000 L CNN
-F 1 "47k" V 5350 1200 50  0000 L CNN
-F 2 "" H 5250 1150 50  0001 C CNN
-F 3 "" H 5250 1150 50  0001 C CNN
-	1    5250 1150
+P 7000 2350
+F 0 "R2" V 7000 2400 50  0000 L CNN
+F 1 "47k" V 7100 2400 50  0000 L CNN
+F 2 "cusf:0402" H 7000 2350 50  0001 C CNN
+F 3 "" H 7000 2350 50  0001 C CNN
+	1    7000 2350
+	0    1    1    0   
+$EndComp
+Text Notes 9550 3700 2    50   ~ 0
+Micro SD Card
+$Comp
+L cusf-kicad:3v3 #PWR08
+U 1 1 60DEE941
+P 6650 2200
+F 0 "#PWR08" H 6650 2310 50  0001 L CNN
+F 1 "3v3" H 6650 2323 50  0000 C CNN
+F 2 "" H 6650 2200 50  0001 C CNN
+F 3 "" H 6650 2200 50  0001 C CNN
+	1    6650 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 2250 7500 2250
+Connection ~ 7750 2250
+Connection ~ 7500 2250
+Wire Wire Line
+	6750 2250 6650 2250
+Connection ~ 6750 2250
+Wire Wire Line
+	6650 2250 6650 2200
+Wire Wire Line
+	8000 2250 7750 2250
+Wire Wire Line
+	6750 2600 8050 2600
+Connection ~ 6750 2600
+Wire Wire Line
+	7500 2900 8050 2900
+Connection ~ 7500 2900
+Wire Wire Line
+	7750 3000 8050 3000
+Connection ~ 7750 3000
+$Comp
+L cusf-kicad:R R4
+U 1 1 60D2AC4C
+P 7500 2350
+F 0 "R4" V 7500 2400 50  0000 L CNN
+F 1 "47k" V 7600 2400 50  0000 L CNN
+F 2 "cusf:0402" H 7500 2350 50  0001 C CNN
+F 3 "" H 7500 2350 50  0001 C CNN
+	1    7500 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L cusf-kicad:R R5
+U 1 1 60D2A9E0
+P 7750 2350
+F 0 "R5" V 7750 2400 50  0000 L CNN
+F 1 "47k" V 7850 2400 50  0000 L CNN
+F 2 "cusf:0402" H 7750 2350 50  0001 C CNN
+F 3 "" H 7750 2350 50  0001 C CNN
+	1    7750 2350
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	6250 1050 6000 1050
+	7750 2450 7750 3000
+Wire Notes Line
+	6200 5400 9600 5400
+Wire Notes Line
+	9600 1700 9600 3750
+Wire Notes Line
+	6200 1700 9600 1700
+Wire Notes Line
+	6200 3750 6200 1700
+Wire Notes Line
+	9600 3750 6200 3750
 Wire Wire Line
-	4900 1050 4900 1000
-Connection ~ 5000 1050
+	9300 2850 9300 2900
 Wire Wire Line
-	5000 1050 4900 1050
-Connection ~ 5250 1050
-Wire Wire Line
-	5250 1050 5000 1050
-Connection ~ 5500 1050
-Wire Wire Line
-	5500 1050 5250 1050
-Connection ~ 5750 1050
-Wire Wire Line
-	5750 1050 5500 1050
-Connection ~ 6000 1050
-Wire Wire Line
-	6000 1050 5750 1050
+	9300 2700 9300 2750
 $Comp
-L cusf-kicad:3v3 #PWR?
-U 1 1 60DEE941
-P 4900 1000
-F 0 "#PWR?" H 4900 1110 50  0001 L CNN
-F 1 "3v3" H 4900 1123 50  0000 C CNN
-F 2 "" H 4900 1000 50  0001 C CNN
-F 3 "" H 4900 1000 50  0001 C CNN
-	1    4900 1000
-	1    0    0    -1  
-$EndComp
-NoConn ~ 1750 4300
-NoConn ~ 1750 4400
-NoConn ~ 1750 4500
-NoConn ~ 1750 4600
-NoConn ~ 2750 2100
-NoConn ~ 1750 3600
-NoConn ~ 1750 3700
-NoConn ~ 1750 3800
-Connection ~ 1300 6450
-Wire Wire Line
-	1300 6450 1350 6450
-Connection ~ 1300 6550
-Connection ~ 1100 6450
-Wire Wire Line
-	1100 6450 1300 6450
-Wire Wire Line
-	650  6450 1100 6450
-Wire Wire Line
-	2650 5400 2900 5400
-Wire Wire Line
-	2650 5500 2900 5500
-Wire Wire Line
-	1650 5500 1850 5500
-$Comp
-L cusf-kicad:C C?
-U 1 1 60A3E1F9
-P 1350 1700
-AR Path="/6013AE2F/60A3E1F9" Ref="C?"  Part="1" 
-AR Path="/60A3E1F9" Ref="C?"  Part="1" 
-AR Path="/605DF50F/60A3E1F9" Ref="C?"  Part="1" 
-F 0 "C?" H 1100 1700 50  0000 R CNN
-F 1 "100n" H 950 1700 50  0000 R CNN
-F 2 "agg:0402" H 1350 1700 50  0001 C CNN
-F 3 "" H 1350 1700 50  0001 C CNN
-F 4 "2496771" H 1350 1700 50  0001 C CNN "Farnell"
-	1    1350 1700
+L cusf-kicad:GND #PWR016
+U 1 1 5F50768E
+P 9300 2900
+F 0 "#PWR016" H 9170 2940 50  0001 L CNN
+F 1 "GND" H 9300 2800 50  0000 C CNN
+F 2 "" H 9300 2900 50  0001 C CNN
+F 3 "" H 9300 2900 50  0001 C CNN
+	1    9300 2900
 	1    0    0    -1  
 $EndComp
 $Comp
-L cusf-kicad:C C?
-U 1 1 60A3E28A
-P 1350 1600
-AR Path="/6013AE2F/60A3E28A" Ref="C?"  Part="1" 
-AR Path="/60A3E28A" Ref="C?"  Part="1" 
-AR Path="/605DF50F/60A3E28A" Ref="C?"  Part="1" 
-F 0 "C?" H 1100 1600 50  0000 R CNN
-F 1 "100n" H 950 1600 50  0000 R CNN
-F 2 "agg:0402" H 1350 1600 50  0001 C CNN
-F 3 "" H 1350 1600 50  0001 C CNN
-F 4 "2496771" H 1350 1600 50  0001 C CNN "Farnell"
-	1    1350 1600
+L cusf-kicad:C C2
+U 1 1 5F506320
+P 9300 2750
+F 0 "C2" V 9300 2800 50  0000 L CNN
+F 1 "100n" V 9400 2800 50  0000 L CNN
+F 2 "cusf:0402" H 9300 2750 50  0001 C CNN
+F 3 "" H 9300 2750 50  0001 C CNN
+	1    9300 2750
+	0    1    1    0   
+$EndComp
+$Comp
+L cusf-kicad:3v3 #PWR015
+U 1 1 5F505FB9
+P 9300 2700
+F 0 "#PWR015" H 9300 2810 50  0001 L CNN
+F 1 "3v3" H 9300 2823 50  0000 C CNN
+F 2 "" H 9300 2700 50  0001 C CNN
+F 3 "" H 9300 2700 50  0001 C CNN
+	1    9300 2700
+	1    0    0    -1  
+$EndComp
+NoConn ~ 8950 3100
+NoConn ~ 8950 3000
+Wire Wire Line
+	9050 2400 9050 3200
+$Comp
+L cusf-kicad:R R1
+U 1 1 5EE75B3D
+P 6750 2350
+F 0 "R1" V 6750 2400 50  0000 L CNN
+F 1 "47k" V 6850 2400 50  0000 L CNN
+F 2 "cusf:0402" H 6750 2350 50  0001 C CNN
+F 3 "" H 6750 2350 50  0001 C CNN
+	1    6750 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L cusf-kicad:MICROSD U1
+U 1 1 56B79B96
+P 8450 2700
+F 0 "U1" H 8150 3100 50  0000 L CNN
+F 1 "MICROSD" H 8150 2200 50  0000 L CNN
+F 2 "cusf:MICROSD_MOLEX_503398-1892" H 8150 2100 50  0001 L CNN
+F 3 "" H 8050 3000 50  0001 C CNN
+F 4 "2358234" H 8150 2000 50  0001 L CNN "Farnell"
+	1    8450 2700
 	1    0    0    -1  
 $EndComp
 $Comp
-L cusf-kicad:C C?
-U 1 1 60A3E309
-P 1350 1500
-AR Path="/6013AE2F/60A3E309" Ref="C?"  Part="1" 
-AR Path="/60A3E309" Ref="C?"  Part="1" 
-AR Path="/605DF50F/60A3E309" Ref="C?"  Part="1" 
-F 0 "C?" H 1100 1500 50  0000 R CNN
-F 1 "100n" H 950 1500 50  0000 R CNN
-F 2 "agg:0402" H 1350 1500 50  0001 C CNN
-F 3 "" H 1350 1500 50  0001 C CNN
-F 4 "2496771" H 1350 1500 50  0001 C CNN "Farnell"
-	1    1350 1500
+L cusf-kicad:GND #PWR014
+U 1 1 56B79BA5
+P 9050 3200
+F 0 "#PWR014" H 9050 2950 50  0001 C CNN
+F 1 "GND" H 9050 3100 50  0000 C CNN
+F 2 "" H 9050 3200 50  0000 C CNN
+F 3 "" H 9050 3200 50  0000 C CNN
+	1    9050 3200
 	1    0    0    -1  
 $EndComp
 $Comp
-L cusf-kicad:C C?
-U 1 1 60A3E39A
-P 1350 1400
-AR Path="/6013AE2F/60A3E39A" Ref="C?"  Part="1" 
-AR Path="/60A3E39A" Ref="C?"  Part="1" 
-AR Path="/605DF50F/60A3E39A" Ref="C?"  Part="1" 
-F 0 "C?" H 1100 1400 50  0000 R CNN
-F 1 "100n" H 950 1400 50  0000 R CNN
-F 2 "agg:0402" H 1350 1400 50  0001 C CNN
-F 3 "" H 1350 1400 50  0001 C CNN
-F 4 "2496771" H 1350 1400 50  0001 C CNN "Farnell"
-	1    1350 1400
+L cusf-kicad:GND #PWR09
+U 1 1 56B79BAB
+P 8000 3200
+F 0 "#PWR09" H 8000 2950 50  0001 C CNN
+F 1 "GND" H 8000 3100 50  0000 C CNN
+F 2 "" H 8000 3200 50  0000 C CNN
+F 3 "" H 8000 3200 50  0000 C CNN
+	1    8000 3200
 	1    0    0    -1  
 $EndComp
+Text Label 6300 2600 0    50   ~ 0
+MISO
+Text Label 6300 3000 0    50   ~ 0
+MOSI
+Text Label 6300 3100 0    50   ~ 0
+SCLK
 Wire Wire Line
-	1150 1400 1350 1400
+	7500 2450 7500 2900
 Wire Wire Line
-	1150 1500 1350 1500
+	6750 2450 6750 2600
 Wire Wire Line
-	1150 1600 1350 1600
+	6750 2250 6750 2350
 Wire Wire Line
-	1150 1700 1350 1700
+	7500 2250 7500 2350
 Wire Wire Line
-	1450 1700 1650 1700
+	7750 2250 7750 2350
 Wire Wire Line
-	1650 1600 1450 1600
+	8000 2250 8000 2400
 Wire Wire Line
-	1450 1500 1650 1500
+	8000 2400 8050 2400
 Wire Wire Line
-	1650 1400 1450 1400
+	9050 2400 8950 2400
 Wire Wire Line
-	1250 2800 1750 2800
+	8000 2500 8050 2500
+Wire Wire Line
+	8000 3200 8000 2500
+Entry Wire Line
+	5850 2000 5950 2100
+Entry Wire Line
+	5950 4650 6050 4750
+Entry Wire Line
+	5950 4450 6050 4550
+Entry Wire Line
+	5950 4550 6050 4650
+Entry Wire Line
+	5950 4350 6050 4450
+Wire Wire Line
+	6050 2600 6750 2600
+Wire Wire Line
+	6050 2900 7500 2900
+Wire Wire Line
+	6050 3000 7750 3000
+Entry Wire Line
+	5950 2800 6050 2900
+Entry Wire Line
+	5950 2900 6050 3000
+Entry Wire Line
+	5950 3000 6050 3100
+Entry Wire Line
+	5950 2500 6050 2600
+Text Notes 9600 5550 2    50   ~ 0
+Storage Peripherals
+Wire Wire Line
+	6050 3100 8050 3100
+Wire Wire Line
+	6050 4450 6600 4450
+Wire Wire Line
+	6050 4550 6600 4550
+Wire Wire Line
+	6050 4650 6600 4650
 $Comp
-L cusf-kicad:CONN_01x04 J?
-U 1 1 60AA8D44
-P 6050 4600
-F 0 "J?" H 6000 4700 50  0000 L BNN
-F 1 "USB" H 6000 4200 50  0000 L CNN
-F 2 "" H 6050 4600 50  0001 C CNN
-F 3 "" H 6050 4600 50  0001 C CNN
-	1    6050 4600
+L cusf-kicad:W25Q80 IC2
+U 1 1 605DD8AE
+P 7300 4650
+F 0 "IC2" H 7900 4950 50  0000 R CNN
+F 1 "W25Q80" H 7900 4350 50  0000 R CNN
+F 2 "cusf:UFDFN-8" H 6700 4250 50  0001 L CNN
+F 3 "http://www.winbond.com/resource-files/w25q80dv%20dl_revh_10022015.pdf" H 6700 4150 50  0001 L CNN
+F 4 "W25Q80DVUXIECT-ND" H 6700 4050 50  0001 L CNN "DigiKey"
+	1    7300 4650
 	-1   0    0    -1  
 $EndComp
+Wire Notes Line
+	6200 5400 6200 3800
 $Comp
-L cusf-kicad:ESD_DIODE D?
-U 1 1 60AAA83D
-P 5700 4950
-F 0 "D?" V 5700 5000 50  0000 L CNN
-F 1 "ESD_DIODE" H 5650 4850 50  0001 L CNN
-F 2 "cusf:0402" H 5650 4750 50  0001 L CNN
-F 3 "" H 5600 4950 50  0001 C CNN
-F 4 "2368169" H 5650 4650 50  0001 L CNN "Farnell"
-	1    5700 4950
+L cusf-kicad:GND #PWR011
+U 1 1 6065FA51
+P 8150 5050
+F 0 "#PWR011" H 8150 4800 50  0001 C CNN
+F 1 "GND" H 8150 4950 50  0000 C CNN
+F 2 "" H 8150 5050 50  0000 C CNN
+F 3 "" H 8150 5050 50  0000 C CNN
+	1    8150 5050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 5050 8150 4550
+Wire Wire Line
+	8150 4550 8000 4550
+$Comp
+L cusf-kicad:3v3 #PWR010
+U 1 1 6068ACD4
+P 8150 4150
+F 0 "#PWR010" H 8150 4260 50  0001 L CNN
+F 1 "3v3" H 8150 4273 50  0000 C CNN
+F 2 "" H 8150 4150 50  0001 C CNN
+F 3 "" H 8150 4150 50  0001 C CNN
+	1    8150 4150
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 4450 8150 4150
+Wire Wire Line
+	8150 4450 8000 4450
+NoConn ~ 8000 4750
+NoConn ~ 8000 4650
+Text Label 6300 4550 0    50   ~ 0
+~CS2
+Text Label 6300 4650 0    50   ~ 0
+MOSI
+Text Label 6300 4750 0    50   ~ 0
+MISO
+Text Label 6300 4450 0    50   ~ 0
+SCLK
+Wire Notes Line
+	9600 3800 9600 5400
+Wire Notes Line
+	6200 3800 9600 3800
+Text Notes 6250 3900 0    50   ~ 0
+Placeholder for a larger chip (512 Mbit)
+Text Notes 9550 5350 2    50   ~ 0
+SPI Flash Storage
+$Comp
+L cusf-kicad:3v3 #PWR012
+U 1 1 611267B5
+P 8400 4550
+F 0 "#PWR012" H 8400 4660 50  0001 L CNN
+F 1 "3v3" H 8400 4673 50  0000 C CNN
+F 2 "" H 8400 4550 50  0001 C CNN
+F 3 "" H 8400 4550 50  0001 C CNN
+	1    8400 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L cusf-kicad:C C1
+U 1 1 611267BB
+P 8400 4600
+F 0 "C1" V 8400 4650 50  0000 L CNN
+F 1 "100n" V 8500 4650 50  0000 L CNN
+F 2 "cusf:0402" H 8400 4600 50  0001 C CNN
+F 3 "" H 8400 4600 50  0001 C CNN
+	1    8400 4600
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	5950 4900 5900 4900
 $Comp
-L cusf-kicad:ESD_DIODE D?
-U 1 1 60AC181D
-P 5450 4950
-F 0 "D?" V 5450 5000 50  0000 L CNN
-F 1 "ESD_DIODE" H 5400 4850 50  0001 L CNN
-F 2 "cusf:0402" H 5400 4750 50  0001 L CNN
-F 3 "" H 5350 4950 50  0001 C CNN
-F 4 "2368169" H 5400 4650 50  0001 L CNN "Farnell"
-	1    5450 4950
-	0    1    1    0   
-$EndComp
-$Comp
-L cusf-kicad:ESD_DIODE D?
-U 1 1 60AC18FC
-P 5200 4950
-F 0 "D?" V 5200 5000 50  0000 L CNN
-F 1 "ESD_DIODE" H 5150 4850 50  0001 L CNN
-F 2 "cusf:0402" H 5150 4750 50  0001 L CNN
-F 3 "" H 5100 4950 50  0001 C CNN
-F 4 "2368169" H 5150 4650 50  0001 L CNN "Farnell"
-	1    5200 4950
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5200 5100 5200 5050
-Wire Wire Line
-	5450 5050 5450 5100
-Wire Wire Line
-	5700 5050 5700 5100
-$Comp
-L cusf-kicad:GND #PWR?
-U 1 1 60AF5959
-P 5900 5100
-F 0 "#PWR?" H 5770 5140 50  0001 L CNN
-F 1 "GND" H 5900 5000 50  0000 C CNN
-F 2 "" H 5900 5100 50  0001 C CNN
-F 3 "" H 5900 5100 50  0001 C CNN
-	1    5900 5100
+L cusf-kicad:GND #PWR013
+U 1 1 611267C1
+P 8400 4750
+F 0 "#PWR013" H 8270 4790 50  0001 L CNN
+F 1 "GND" H 8400 4650 50  0000 C CNN
+F 2 "" H 8400 4750 50  0001 C CNN
+F 3 "" H 8400 4750 50  0001 C CNN
+	1    8400 4750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5700 4850 5700 4800
+	8400 4550 8400 4600
 Wire Wire Line
-	5450 4850 5450 4700
+	8400 4700 8400 4750
 Wire Wire Line
-	5750 4600 5950 4600
-Wire Wire Line
-	5650 4600 5200 4600
-Wire Wire Line
-	5200 4600 5200 4850
-$Comp
-L cusf-kicad:R R?
-U 1 1 60AABA6D
-P 5650 4600
-F 0 "R?" H 5700 4650 50  0000 C CNN
-F 1 "1k" H 5700 4550 50  0000 C CNN
-F 2 "" H 5650 4600 50  0001 C CNN
-F 3 "" H 5650 4600 50  0001 C CNN
-	1    5650 4600
-	1    0    0    -1  
-$EndComp
-Text Label 4550 4600 0    50   ~ 0
-OTG_HS_VBUS
-Text Label 4550 4700 0    50   ~ 0
-OTG_HS_DP
-Text Label 4550 4800 0    50   ~ 0
-OTG_HS_DM
-Wire Wire Line
-	5900 4900 5900 5100
-Connection ~ 5200 4600
-Connection ~ 5450 4700
-Wire Wire Line
-	5450 4700 5950 4700
-Connection ~ 5700 4800
-Wire Wire Line
-	5700 4800 5950 4800
-Wire Wire Line
-	4550 4800 5700 4800
-Wire Wire Line
-	4550 4700 5450 4700
-Wire Wire Line
-	4550 4600 5200 4600
-$Comp
-L cusf-kicad:GND #PWR?
-U 1 1 60BBE3E3
-P 5700 5100
-F 0 "#PWR?" H 5570 5140 50  0001 L CNN
-F 1 "GND" H 5700 5000 50  0000 C CNN
-F 2 "" H 5700 5100 50  0001 C CNN
-F 3 "" H 5700 5100 50  0001 C CNN
-	1    5700 5100
-	1    0    0    -1  
-$EndComp
-$Comp
-L cusf-kicad:GND #PWR?
-U 1 1 60BBE49F
-P 5450 5100
-F 0 "#PWR?" H 5320 5140 50  0001 L CNN
-F 1 "GND" H 5450 5000 50  0000 C CNN
-F 2 "" H 5450 5100 50  0001 C CNN
-F 3 "" H 5450 5100 50  0001 C CNN
-	1    5450 5100
-	1    0    0    -1  
-$EndComp
-$Comp
-L cusf-kicad:GND #PWR?
-U 1 1 60BBE59E
-P 5200 5100
-F 0 "#PWR?" H 5070 5140 50  0001 L CNN
-F 1 "GND" H 5200 5000 50  0000 C CNN
-F 2 "" H 5200 5100 50  0001 C CNN
-F 3 "" H 5200 5100 50  0001 C CNN
-	1    5200 5100
-	1    0    0    -1  
-$EndComp
+	6050 4750 6600 4750
 Wire Notes Line
-	6200 4350 4450 4350
+	6150 1650 9650 1650
 Wire Notes Line
-	4450 4350 4450 5450
+	9650 1650 9650 5600
 Wire Notes Line
-	4450 5450 6200 5450
+	9650 5600 6150 5600
 Wire Notes Line
-	6200 4350 6200 5450
-Wire Wire Line
-	4550 3100 5100 3100
-Wire Wire Line
-	4550 3200 5100 3200
-Wire Wire Line
-	4550 3300 5100 3300
-Wire Wire Line
-	4550 3400 5100 3400
-Text Label 1200 4200 0    50   ~ 0
-FLASH_CS
-Text Label 1200 4100 0    50   ~ 0
-FLASH_MOSI
-Text Label 1200 4000 0    50   ~ 0
-FLASH_MISO
-Text Label 1200 3900 0    50   ~ 0
-FLASH_SCLK
-Wire Wire Line
-	1200 3900 1750 3900
-Wire Wire Line
-	1200 4200 1750 4200
-Wire Wire Line
-	1200 4100 1750 4100
-Wire Wire Line
-	1200 4000 1750 4000
-Wire Wire Line
-	4550 1400 5000 1400
-Wire Wire Line
-	4550 1500 5250 1500
-Wire Wire Line
-	4550 1600 5500 1600
-Wire Wire Line
-	4550 1700 5750 1700
-Wire Wire Line
-	4550 1800 6000 1800
-Wire Wire Line
-	4550 1900 6300 1900
-Text Label 3450 4300 2    50   ~ 0
-SDIO_CLK
-Text Label 3450 4800 2    50   ~ 0
-SDIO_CMD
-Text Label 3450 4200 2    50   ~ 0
-SDIO_D3
-Text Label 3450 4100 2    50   ~ 0
-SDIO_D2
-Text Label 3450 4000 2    50   ~ 0
-SDIO_D1
-Text Label 3450 3900 2    50   ~ 0
-SDIO_D0
-Wire Wire Line
-	3450 3900 2750 3900
-Wire Wire Line
-	3450 4000 2750 4000
-Wire Wire Line
-	3450 4100 2750 4100
-Wire Wire Line
-	3450 4200 2750 4200
-Wire Wire Line
-	3450 4800 2750 4800
-Wire Wire Line
-	3450 4300 2750 4300
-Wire Wire Line
-	3050 6350 3600 6350
-Wire Wire Line
-	3050 6650 3600 6650
-Wire Wire Line
-	3050 6950 3600 6950
-Wire Wire Line
-	3900 6350 4150 6350
-Wire Wire Line
-	4150 6950 4150 6650
-Wire Wire Line
-	3900 6950 4150 6950
-Wire Wire Line
-	3900 6650 4150 6650
-Connection ~ 4150 6650
-Wire Wire Line
-	4150 6650 4150 6350
-$Comp
-L cusf-kicad:LED D?
-U 1 1 611606FC
-P 3900 6650
-F 0 "D?" H 3900 6600 50  0000 R CNN
-F 1 "YLW" H 3900 6700 50  0000 R CNN
-F 2 "agg:0603-LED" H 3900 6650 50  0001 C CNN
-F 3 "" H 3900 6650 50  0001 C CNN
-F 4 "2314404" H 3900 6650 50  0001 C CNN "Farnell"
-	1    3900 6650
-	-1   0    0    1   
-$EndComp
-$Comp
-L cusf-kicad:LED D?
-U 1 1 611609A3
-P 3900 6950
-F 0 "D?" H 3900 6900 50  0000 R CNN
-F 1 "GRN" H 3900 7000 50  0000 R CNN
-F 2 "agg:0603-LED" H 3900 6950 50  0001 C CNN
-F 3 "" H 3900 6950 50  0001 C CNN
-F 4 "2314404" H 3900 6950 50  0001 C CNN "Farnell"
-	1    3900 6950
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	4150 6950 4150 7050
-Connection ~ 4150 6950
-$Comp
-L cusf-kicad:GND #PWR?
-U 1 1 6118D95A
-P 4150 7050
-F 0 "#PWR?" H 4020 7090 50  0001 L CNN
-F 1 "GND" H 4150 6950 50  0000 C CNN
-F 2 "" H 4150 7050 50  0001 C CNN
-F 3 "" H 4150 7050 50  0001 C CNN
-	1    4150 7050
-	1    0    0    -1  
-$EndComp
-Text Notes 6150 5400 2    50   ~ 0
-USB OTG HS
-Wire Wire Line
-	1200 4700 1750 4700
-Wire Wire Line
-	1200 4800 1750 4800
-Wire Wire Line
-	1200 4900 1750 4900
-Wire Wire Line
-	2750 3400 3450 3400
-Wire Wire Line
-	2750 3200 3450 3200
-Wire Wire Line
-	2750 3300 3450 3300
-Wire Wire Line
-	2750 2900 3450 2900
-Wire Wire Line
-	2750 2800 3450 2800
-Wire Wire Line
-	2750 2700 3450 2700
-Wire Wire Line
-	2750 2300 3450 2300
-Wire Wire Line
-	2750 2200 3450 2200
-Wire Wire Line
-	2750 1700 3450 1700
-Text Notes 6950 4000 2    50   ~ 0
-Flash Storage
-Text Notes 7800 2300 2    50   ~ 0
-Micro SD Card
+	6150 5600 6150 1650
+Wire Notes Line
+	5750 1650 5750 3950
+Wire Notes Line
+	5750 3950 2550 3950
+Wire Notes Line
+	2550 3950 2550 1650
+Wire Notes Line
+	2550 1650 5750 1650
+Text Notes 5700 3900 2    50   ~ 0
+Data In (RJ45)
+Wire Bus Line
+	5950 2100 5950 4650
 $EndSCHEMATC

@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name cusf)(type KiCad)(uri ${KIPRJMOD}/../_lib/cusf-kicad/cusf.pretty)(options "")(descr ""))
+)

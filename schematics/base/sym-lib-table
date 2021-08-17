@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name cusf-kicad)(type Legacy)(uri ${KIPRJMOD}/../cusf-kicad/cusf-kicad.lib)(options "")(descr ""))
-)

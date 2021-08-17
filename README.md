@@ -1,13 +1,14 @@
 <p align="center">
-	<img width="150px" src="img/logo.png">
-	<h1 align="center">PROJECT STRIX</h1>
-	<h3 align="center">Cambridge University Spaceflight</h3>
+	<img width="100%" src="img/header.png">
 </p>
 
 This repository contains the schematics and firmware for the Martlet IV
-Avionics (also known as Project Strix). A full up-to-date specification
-can be found [here][spec], but all key details are reproduced in this
-document.
+Avionics system - Project Strix.
+
+Project Strix is a single-board flight computer designed to carry out essential
+tasks during the launch of Martlet IV. Powered by an ARM Cortex-M4, Strix is
+able to perform a plethora of functions in real time, and respond to dynamic
+events as they happen.
 
 ## Specification
 The system must be able to
@@ -23,31 +24,26 @@ The system must be able to
 		data before launch (i.e. during filling operations).
 	2. To aid an investigation should the rocket vehicle suffer an
 		in-flight malfunction.
-	3. To find out the rocket’s maximum altitude in case loss of
+	3. To find out the rocket's maximum altitude in case loss of
 		the rocket prevents retrieval of stored data.
 
-<sup>*</sup>Note that a commercial off-the-shelf ‘stratologger’ altimeter
+<sup>*</sup>Note that a commercial off-the-shelf 'Stratologger' altimeter
 	will also be wired to the parachutes and will also be able to
 	deploy them for redundancy.
 
 
 ## Core Modules
-The system is composed of several sub-modules, networked via CAN and also
-connected via JTAG chain. Each sub-module is described in detail below.
+The system is composed of several sub-modules, all connected to the central
+microcontroller for unified control.
 
-### Flight Computer
-The flight computer handles the core state esimtation. It takes data from the
-onboard IMU, accelerometer and barometer to feed into a Kalman estimation
-filter, and sends the estimated state to the telemetry and data logging
-subsystems.
+### Altimeter
+The onboard altimeter uses two redundant IMUs and barometric pressure sensors
+to accurately determine the altitude of the rocket.
 
-The flight computer consists of a STM32F405RxTx connected to an ADXL345
-accelerometer and MS5540C barometer.
-
-### Data Logger
-The data logger takes data from the Pulsar engine sensors and saves a copy on
-both an SD card and onboard flash memory. It also contains the analog front ends
-to interface with the following components:
+### Sensor Front-Ends
+The sensor front-ends take data from the Pulsar engine sensors and converts them
+into voltages readable by the microcontroller's onboard ADCs. The subsystem
+supports the following sensors:
 
 Sensor             | Quantity | Model
 ------------------ | -------- | --------------------------------------------------------
@@ -55,22 +51,16 @@ Pressure Tranducer | 2        | [Omega PXM319-070GI][p_sensor]
 Thermocouple       | 4        | [RS Pro K-type welded tip 1/0.315m 5m (762-1118)][t_sensor]
 
 ### Radio
-The radio is an almost carbon copy of the radio sussystem on the Martlet III.
-It consists of both the telemetry system and GPS reciever. The telemetry radio
-is synchronised through a PLL with the GPS timepulse to ensure it stays in phase
-with the ground support reciever.
+The radio subsystem handles the onboard two-way ISM-band radio, which allows
+Strix to both send telemetry to ground control and receive telecommands. A
+modular architecture allows for precice control of output power to ensure
+the rocket operates within local limits. The subsystem also contains a GPS
+receiver, which assists in location of the rocket after landing.
 
 ### PSU
-The power supply subsystem handles 3v3 and 5v DC-DC conversion, as well as
-battery charging and balancing. It aims to consolidate the 4-board system found
-on the Martlet III. The exact capacity of the battery pack is yet to be
-determined, but it will consist of an array of 18650s at 3.6v 3400mAh each.
-
-### Master Microcontroller
-The master microcontroller handles CAN to USB and USB to JTAG chain conversion,
-as in the base board of the Martlet III avionics. The system should also
-include an ADuM to isolate the EXT_UART.
-
+The modular power supply provides regulated 1.8V, 3.3V, and 12V power to the
+flight computer and blackbox. Power is delivered from 2x 18650 Li-ion cells,
+which can be recharged on the pad before switching to internal power.
 
 ## Design Constraints
 The space allowed for the system is shown below (dimensions
@@ -85,7 +75,7 @@ must be left empty to allow other cables to pass through the rocket
 (in addition to the central hole).
 
 The module, including any batteries and mounting hardware, should have
-as little mass as possible. It must weigh no more than 500g.
+as little mass as possible - it must weigh no more than 500g.
 
 [spec]: https://docs.google.com/document/d/1wuNd2ukuNRVKfNca_YTkUf5Qp6ZxcXcQoBAJ7XX6a5Y
 [p_sensor]: https://br.omega.com/omegaFiles/pressure/pdf/PXM309.pdf
