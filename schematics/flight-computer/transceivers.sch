@@ -145,7 +145,7 @@ Wire Notes Line
 Wire Notes Line
 	6700 4100 8500 4100
 $Comp
-L cusf-kicad:SN65LVDT41 IC?
+L flight-computer-rescue:SN65LVDT41-cusf-kicad IC?
 U 1 1 62044C5D
 P 4650 3150
 AR Path="/62044C5D" Ref="IC?"  Part="1" 
