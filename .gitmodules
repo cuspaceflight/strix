@@ -1,6 +1,4 @@
-[submodule "cusf-kicad"]
-	path = schematics/_lib/cusf-kicad
-	url = git://github.com/cuspaceflight/cusf-kicad.git
 [submodule "ChibiOS"]
 	path = firmware/ChibiOS
 	url = git://github.com/ChibiOS/ChibiOS.git
+
