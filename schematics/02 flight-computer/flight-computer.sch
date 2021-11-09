@@ -569,12 +569,12 @@ Wire Wire Line
 Wire Wire Line
 	8000 5500 8050 5500
 $Comp
-L Strix:R R3
+L Strix:R R5
 U 1 1 618D7B1A
 P 8150 5400
-AR Path="/618D7B1A" Ref="R3"  Part="1" 
+AR Path="/618D7B1A" Ref="R5"  Part="1" 
 AR Path="/62013BB2/618D7B1A" Ref="R?"  Part="1" 
-F 0 "R3" V 8154 5444 50  0000 L CNN
+F 0 "R5" V 8154 5444 50  0000 L CNN
 F 1 "120" V 8245 5444 50  0000 L CNN
 F 2 "Strix:R_0402" H 8150 5400 50  0001 C CNN
 F 3 "" H 8150 5400 50  0001 C CNN
@@ -623,12 +623,12 @@ Wire Wire Line
 Wire Wire Line
 	8000 3950 8050 3950
 $Comp
-L Strix:R R2
+L Strix:R R4
 U 1 1 615D4399
 P 8150 3850
-AR Path="/615D4399" Ref="R2"  Part="1" 
+AR Path="/615D4399" Ref="R4"  Part="1" 
 AR Path="/62013BB2/615D4399" Ref="R?"  Part="1" 
-F 0 "R2" V 8154 3894 50  0000 L CNN
+F 0 "R4" V 8154 3894 50  0000 L CNN
 F 1 "120" V 8245 3894 50  0000 L CNN
 F 2 "Strix:R_0402" H 8150 3850 50  0001 C CNN
 F 3 "" H 8150 3850 50  0001 C CNN
@@ -1165,12 +1165,12 @@ $EndComp
 Connection ~ 9950 4100
 Connection ~ 9950 5650
 Wire Wire Line
-	4400 1700 3250 1700
+	4850 1700 4250 1700
 Wire Wire Line
-	3250 1600 4400 1600
-Text Label 4400 1600 2    50   ~ 0
+	3250 1600 4150 1600
+Text Label 4850 1600 2    50   ~ 0
 I2C1_SCL
-Text Label 4400 1700 2    50   ~ 0
+Text Label 4850 1700 2    50   ~ 0
 I2C1_SDA
 Wire Wire Line
 	3250 1000 4400 1000
@@ -1804,4 +1804,64 @@ Wire Notes Line
 	8050 3150 10950 3150
 Text Notes 10900 3100 2    50   ~ 0
 Upper Board Connector (Female)
+$Comp
+L Strix:R R2
+U 1 1 618CB7F3
+P 4150 1400
+AR Path="/618CB7F3" Ref="R2"  Part="1" 
+AR Path="/62013BB2/618CB7F3" Ref="R?"  Part="1" 
+F 0 "R2" V 4154 1444 50  0000 L CNN
+F 1 "4k7" V 4245 1444 50  0000 L CNN
+F 2 "Strix:R_0402" H 4150 1400 50  0001 C CNN
+F 3 "" H 4150 1400 50  0001 C CNN
+	1    4150 1400
+	0    -1   1    0   
+$EndComp
+$Comp
+L Strix:R R3
+U 1 1 618CC569
+P 4250 1400
+AR Path="/618CC569" Ref="R3"  Part="1" 
+AR Path="/62013BB2/618CC569" Ref="R?"  Part="1" 
+F 0 "R3" V 4254 1444 50  0000 L CNN
+F 1 "4k7" V 4345 1444 50  0000 L CNN
+F 2 "Strix:R_0402" H 4250 1400 50  0001 C CNN
+F 3 "" H 4250 1400 50  0001 C CNN
+	1    4250 1400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4250 1500 4250 1700
+Connection ~ 4250 1700
+Wire Wire Line
+	4250 1700 3250 1700
+Wire Wire Line
+	4150 1500 4150 1600
+Connection ~ 4150 1600
+Wire Wire Line
+	4150 1600 4850 1600
+Wire Wire Line
+	4150 1400 4150 1350
+Wire Wire Line
+	4150 1350 4250 1350
+Wire Wire Line
+	4250 1350 4250 1400
+$Comp
+L Strix:3v3 #PWR?
+U 1 1 6197418E
+P 4150 1300
+AR Path="/6013AE2F/6197418E" Ref="#PWR?"  Part="1" 
+AR Path="/6197418E" Ref="#PWR?"  Part="1" 
+AR Path="/605DF50F/6197418E" Ref="#PWR?"  Part="1" 
+AR Path="/6013AEF4/6197418E" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4150 1410 50  0001 L CNN
+F 1 "3v3" H 4200 1300 50  0000 L BNN
+F 2 "" H 4150 1300 50  0001 C CNN
+F 3 "" H 4150 1300 50  0001 C CNN
+	1    4150 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 1300 4150 1350
+Connection ~ 4150 1350
 $EndSCHEMATC
