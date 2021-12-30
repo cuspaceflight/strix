@@ -80,6 +80,12 @@ K pressure SPI I2C
 F https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=MS5611-01BA03&DocType=Data+Sheet&DocLang=English
 $ENDCMP
 #
+$CMP MountingHole
+D Mounting Hole without connection
+K mounting hole
+F ~
+$ENDCMP
+#
 $CMP MountingHole_Pad
 D Mounting Hole with connection
 K mounting hole
