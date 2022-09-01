@@ -1,0 +1,15 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP RJHSE-538x-cusf-kicad
+F http://www.farnell.com/cad/2167247.pdf
+$ENDCMP
+#
+$CMP SN65LVDT14-cusf-kicad
+F https://www.ti.com/lit/ds/symlink/sn65lvdt14.pdf
+$ENDCMP
+#
+$CMP W25Q80-cusf-kicad
+F http://www.winbond.com/resource-files/w25q80dv%20dl_revh_10022015.pdf
+$ENDCMP
+#
+#End Doc Library

@@ -1,4 +1,19 @@
-[submodule "ChibiOS"]
-	path = firmware/ChibiOS
-	url = git://github.com/ChibiOS/ChibiOS.git
-
+[submodule "schematics/00 lib"]
+	path = schematics/00 lib
+	url = https://github.com/cuspaceflight/strix-symbols
+[submodule "firmware/00 shared/ChibiOS"]
+	path = firmware/00 shared/ChibiOS
+	url = https://github.com/ChibiOS/ChibiOS
+	branch = stable_21.11.x
+[submodule "firmware/00 shared/gen-board"]
+	path = firmware/00 shared/gen-board
+	url = https://github.com/HarkonenBade/gen-board.h
+[submodule "firmware/00 shared/drivers"]
+	path = firmware/00 shared/drivers
+	url = https://github.com/cuspaceflight/strix-drivers
+[submodule "firmware/01 flight-computer/lib/buffalo"]
+	path = firmware/01 flight-computer/lib/buffalo
+	url = https://github.com/cuspaceflight/buffalo
+[submodule "firmware/01 flight-computer/lib/coyote"]
+	path = firmware/01 flight-computer/lib/coyote
+	url = https://github.com/cuspaceflight/coyote

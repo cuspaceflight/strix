@@ -1,3 +1,4 @@
 (sym_lib_table
-  (lib (name cusf-kicad)(type Legacy)(uri ${KIPRJMOD}/../_lib/cusf-kicad/cusf-kicad.lib)(options "")(descr ""))
+  (lib (name "cusf-kicad")(type "Legacy")(uri "${KIPRJMOD}/../_lib/cusf-kicad/cusf-kicad.lib")(options "")(descr ""))
+  (lib (name "blackbox-rescue")(type "Legacy")(uri "${KIPRJMOD}/blackbox-rescue.lib")(options "")(descr ""))
 )
