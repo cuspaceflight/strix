@@ -1,3 +1,3 @@
 (sym_lib_table
-  (lib (name Strix)(type Legacy)(uri "${KIPRJMOD}/../00 lib/Strix.lib")(options "")(descr ""))
+  (lib (name "Strix")(type "KiCad")(uri "${KIPRJMOD}/../00 lib/Strix.kicad_sym")(options "")(descr ""))
 )
