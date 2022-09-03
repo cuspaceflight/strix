@@ -13,6 +13,7 @@ _autosave-*
 *-save.pro
 *-save.kicad_pcb
 fp-info-cache
+*-backups
 
 # Netlist files (exported from Eeschema)
 *.net
@@ -26,5 +27,9 @@ fp-info-cache
 *.csv
 
 # Exported plot files
-schematics/_plot
+schematics/*/plot/
+
+#chibistudio 
+.dep
+build
 
